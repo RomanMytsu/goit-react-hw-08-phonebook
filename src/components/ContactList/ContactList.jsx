@@ -3,8 +3,11 @@ import {
   selectError,
   selectFilteredContacts,
   selectIsLoading,
-} from '../../redux/selectors';
-import { deleteContacts, fetchContacts } from '../../redux/operations';
+} from '../../redux/Contacts/contacts-selectors';
+import {
+  deleteContacts,
+  fetchContacts,
+} from '../../redux/Contacts/contacts-operations';
 
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import { ListContainer } from './ContactList.styled';

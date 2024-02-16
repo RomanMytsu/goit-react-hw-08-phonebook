@@ -1,5 +1,9 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { addContacts, deleteContacts, fetchContacts } from './operations';
+import {
+  addContacts,
+  deleteContacts,
+  fetchContacts,
+} from './contacts-operations';
 import { initialState } from './initialState';
 import {
   handleFulfilled,
@@ -8,7 +12,7 @@ import {
   handleFulfilledFetch,
   handlePending,
   handleRejected,
-} from './helpers';
+} from '../../shared/functions/redux';
 
 const contactsSlice = createSlice({
   name: 'contacts',

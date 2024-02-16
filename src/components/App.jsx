@@ -1,16 +1,9 @@
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactFilter } from './ContactFilter/ContactFilter';
-import { ContactList } from './ContactList/ContactList';
-import { Container, TitleContacts, TitlePhone } from './App.styled';
+import AppRoutes from './AppRoutes';
 
 export const App = () => {
   return (
-    <Container>
-      <TitlePhone>Phonebook</TitlePhone>
-      <ContactForm />
-      <TitleContacts>Contacts</TitleContacts>
-      <ContactFilter />
-      <ContactList />
-    </Container>
+    <div>
+      <AppRoutes />
+    </div>
   );
 };

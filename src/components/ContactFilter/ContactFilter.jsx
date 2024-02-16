@@ -4,11 +4,12 @@ import {
   FilterInput,
   FilterLabel,
 } from './ContactFilter.styled';
-import { selectFilterValue } from '../../redux/selectors';
-import { updateFilter } from '../../redux/filterSlice';
+
+import { updateFilter } from '../../redux/Filter/filterSlice';
+import { selectFilter } from '../../redux/Filter/filter-selectors';
 
 export const ContactFilter = () => {
-  const filter = useSelector(selectFilterValue);
+  const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
   const handleFilterChange = e => {
