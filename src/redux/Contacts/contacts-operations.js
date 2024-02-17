@@ -8,6 +8,7 @@ export const fetchContacts = createAsyncThunk(
       const data = await requestFetchContacts();
       return data;
     } catch (err) {
+      console.log(err);
       return rejectWithValue(err.message);
     }
   }

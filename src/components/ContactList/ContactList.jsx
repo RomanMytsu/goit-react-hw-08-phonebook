@@ -36,12 +36,12 @@ export const ContactList = () => {
       )}
       {filteredContacts.length > 0 && (
         <ListContainer>
-          {filteredContacts.map(({ id, name, phone }) => {
+          {filteredContacts.map(({ id, name, number }) => {
             return (
               <ContactListItem
                 key={id}
                 name={name}
-                number={phone}
+                number={number}
                 id={id}
                 onDelete={handleDeleteContact}
               />
