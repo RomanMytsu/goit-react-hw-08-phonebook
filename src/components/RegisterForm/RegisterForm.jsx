@@ -69,7 +69,7 @@ const RegisterForm = ({ onSubmit }) => {
           required
         />
       </div>
-      <button type="submit">Sing Up</button>
+      <button type="submit">Sign Up</button>
     </form>
   );
 };
