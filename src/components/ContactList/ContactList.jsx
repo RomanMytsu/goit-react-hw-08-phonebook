@@ -10,7 +10,7 @@ import {
 } from '../../redux/Contacts/contacts-operations';
 
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
-import { ListContainer } from './ContactList.styled';
+import { ListContainer, Wrap } from './ContactList.styled';
 import { useEffect } from 'react';
 import { Loader } from 'components/Loader/Loader';
 
@@ -29,7 +29,7 @@ export const ContactList = () => {
   };
 
   return (
-    <>
+    <Wrap>
       {isLoading && <Loader />}
       {!filteredContacts.length && !isLoading && !isError && (
         <p>There are no contacts</p>
@@ -49,6 +49,6 @@ export const ContactList = () => {
           })}
         </ListContainer>
       )}
-    </>
+    </Wrap>
   );
 };

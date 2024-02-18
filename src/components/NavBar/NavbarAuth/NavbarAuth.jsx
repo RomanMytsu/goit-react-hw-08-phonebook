@@ -1,12 +1,13 @@
-import { NavLink } from 'react-router-dom';
+
+import { Block, Link } from './navbar-auth.styled';
 
 const NavbarAuth = () => {
   return (
-    <div>
-          <NavLink to="register">Register</NavLink> 
+    <Block>
+          <Link to="register">Register</Link> 
           |
-      <NavLink to="login">Login</NavLink>
-    </div>
+      <Link to="login">Login</Link>
+    </Block>
   );
 };
 

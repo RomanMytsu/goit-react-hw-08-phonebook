@@ -1,9 +1,8 @@
-import { ListItemButton, ListItemWrapper } from './ContactListItem.styled';
+import { ListItem, ListItemButton, } from './ContactListItem.styled';
 
 export const ContactListItem = ({ name, number, id, onDelete }) => {
   return (
-    <li>
-      <ListItemWrapper>
+    <ListItem>
         <span>
           {name}: {number}
         </span>
@@ -15,7 +14,6 @@ export const ContactListItem = ({ name, number, id, onDelete }) => {
         >
           Delete
         </ListItemButton>
-      </ListItemWrapper>
-    </li>
+    </ListItem>
   );
 };

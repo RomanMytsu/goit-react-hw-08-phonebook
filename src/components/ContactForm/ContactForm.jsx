@@ -7,7 +7,7 @@ import {
   ContactFormContainer,
   FormButton,
   FormInput,
-  FormLabel,
+  Wrap,
 } from './ContactForm.styled';
 
 export const ContactForm = () => {
@@ -49,30 +49,32 @@ export const ContactForm = () => {
   const newContact = { name: name, number: number };
 
   return (
-    <ContactFormContainer onSubmit={handleSubmit}>
-      <FormLabel htmlFor="nameInput">Name</FormLabel>
-      <FormInput
-        id="nameInput"
-        type="text"
-        name="name"
-        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-        value={name}
-        onChange={handleChange}
-      />
-      <FormLabel htmlFor="numberInput">Number</FormLabel>
-      <FormInput
-        id="numberInput"
-        type="tel"
-        name="number"
-        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-        required
-        value={number}
-        onChange={handleChange}
-      />
-      <FormButton type="submit">Add contact</FormButton>
-    </ContactFormContainer>
+    <Wrap>
+      <ContactFormContainer onSubmit={handleSubmit}>
+        <label htmlFor="nameInput">Name</label>
+        <FormInput
+          id="nameInput"
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+          value={name}
+          onChange={handleChange}
+        />
+        <label htmlFor="numberInput">Number</label>
+        <FormInput
+          id="numberInput"
+          type="tel"
+          name="number"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
+          value={number}
+          onChange={handleChange}
+        />
+        <FormButton type="submit">Add contact</FormButton>
+      </ContactFormContainer>
+    </Wrap>
   );
 };

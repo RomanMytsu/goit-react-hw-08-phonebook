@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { login } from '../redux/auth/auth-operations';
+import { login } from '../../redux/auth/auth-operations';
 import {
   selectAuthLoading,
   selectAuthError,
-} from '../redux/auth/auth-selectors';
+} from '../../redux/auth/auth-selectors';
 import { Loader } from 'components/Loader/Loader';
 
 import LoginForm from 'components/LoginForm/LoginForm';
@@ -21,7 +21,6 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1>Log In</h1>
       {authLoading && <Loader />}
       <LoginForm onSubmit={handleLogin} />
       {authError && <p style={{ color: 'red' }}>{authError}</p>}

@@ -1,4 +1,10 @@
 import { useId, useState } from 'react';
+import {
+  StyledBtn,
+  StyledForm,
+  StyledInput,
+  Wrap,
+} from 'components/RegisterForm/registerform.styled';
 
 const INITIAL_STATE = {
   email: '',
@@ -33,32 +39,34 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor={emailId}>Email</label>
-        <input
-          value={email}
-          onChange={handleChange}
-          type="email"
-          name="email"
-          id={emailId}
-          required
-        />
-      </div>
+    <Wrap>
+      <StyledForm onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor={emailId}>Email</label>
+          <StyledInput
+            value={email}
+            onChange={handleChange}
+            type="email"
+            name="email"
+            id={emailId}
+            required
+          />
+        </div>
 
-      <div>
-        <label htmlFor={passwordId}>Password</label>
-        <input
-          value={password}
-          onChange={handleChange}
-          type="password"
-          name="password"
-          id={passwordId}
-          required
-        />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+        <div>
+          <label htmlFor={passwordId}>Password</label>
+          <StyledInput
+            value={password}
+            onChange={handleChange}
+            type="password"
+            name="password"
+            id={passwordId}
+            required
+          />
+        </div>
+        <StyledBtn type="submit">Login</StyledBtn>
+      </StyledForm>
+    </Wrap>
   );
 };
 

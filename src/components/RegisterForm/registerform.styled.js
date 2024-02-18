@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 export const Wrap = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const Wrap = styled.div`
   padding-top: 30px;
 `;
 
-export const ContactFormContainer = styled.form`
+export const StyledForm = styled.form`
   border-radius: 4px;
   border: 1px solid rgb(255, 255, 255);
   padding: 48px;
@@ -17,7 +17,7 @@ export const ContactFormContainer = styled.form`
   width: 320px;
 `;
 
-export const FormInput = styled.input`
+export const StyledInput = styled.input`
   display: block;
   width: 100%;
   padding: 4px 12px;
@@ -25,7 +25,8 @@ export const FormInput = styled.input`
   line-height: 1.5;
   border-radius: 4px;
 `;
-export const FormButton = styled.button`
+
+export const StyledBtn = styled.button`
   padding: 8px 24px;
   margin-top: 16px;
   background-color: #e6b333;

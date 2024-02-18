@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  FilterContainer,
   FilterInput,
   FilterLabel,
+  Wrap,
 } from './ContactFilter.styled';
 
 import { updateFilter } from '../../redux/Filter/filterSlice';
@@ -17,14 +17,16 @@ export const ContactFilter = () => {
   };
 
   return (
-    <FilterContainer>
-      <FilterLabel htmlFor="nameFilterInput">Find contacts by name</FilterLabel>
-      <FilterInput
-        id="nameFilterInput"
-        type="text"
-        value={filter}
-        onChange={handleFilterChange}
-      />
-    </FilterContainer>
+    <Wrap>
+      <FilterLabel htmlFor="nameFilterInput">
+        Find contacts by name
+        <FilterInput
+          id="nameFilterInput"
+          type="text"
+          value={filter}
+          onChange={handleFilterChange}
+        />
+      </FilterLabel>
+    </Wrap>
   );
 };

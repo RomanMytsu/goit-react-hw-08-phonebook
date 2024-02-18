@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 
 import { selectAuthIsLogin } from '../../../redux/auth/auth-selectors';
 import { menuItems } from './menuItems';
+import { MenuLink, MenuList } from './navbar-menu.styled';
 
 const NavMenu = () => {
   const isLogin = useSelector(selectAuthIsLogin);
@@ -13,11 +13,11 @@ const NavMenu = () => {
 
   const elements = filteredMenuItems.map(({ id, to, text }) => (
     <li key={id}>
-      <NavLink to={to}>{text}</NavLink>
+      <MenuLink to={to}>{text}</MenuLink>
     </li>
   ));
 
-  return <ul>{elements}</ul>;
+  return <MenuList>{elements}</MenuList>;
 };
 
 export default NavMenu;
